@@ -20,9 +20,9 @@ import {DemoMaterialModule} from './material-module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    DemoMaterialModule,
     AppRoutingModule,
-    FormsModule,
-    DemoMaterialModule
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

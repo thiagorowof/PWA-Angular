@@ -1,6 +1,8 @@
 # PWA-Angular
 > Um progressive web app utilizando [AngularJS](https://github.com/angular/angular-cli) (7.3.1).
 
+A aplicação é um simples sistema de cadastro de usuário e de login(Login sem campos) para uma tela com uma lista de usuários registrados, podendo organizar e filtrar os usuários dessa lista, além de remover usuários cadastrados.
+
 ![NPM Version][npm-image]
 ![Build Status][travis-image]
 ![Downloads Stats][npm-downloads]
@@ -16,11 +18,11 @@
 - [x] Utilizar componentes do bower - Não houve necessidade, o próprio npm gerenciou os pacotes;
 - [ ] Dê suporte a IE10+, Chrome, Safari e Firefox;
 - [x] Padrão de Projeto e boas práticas;
-- [ ] Crie um passo a passo de como rodar sua aplicação (Sugestão);
-- [ ] Crie uma breve descrição da solução utilizada;
+- [x] Crie um passo a passo de como rodar sua aplicação (Sugestão);
+- [x] Crie uma breve descrição da solução utilizada;
 - [x] Uso de task runner;
 - [x] Uso de pré-processador css;
-- [ ] Testes End to End;
+- [x] Testes End to End;
 
 Os pontos não preenchidos ainda estão em WIP, em desenvolvimento 
 
@@ -37,24 +39,30 @@ npm install
 
 ### Server de desenvolvimento
 
-Executar `ng serve` para levantar um servidor de desenvolvimento. Navegar para `http://localhost:4200/` para ver a aplicação em funcionamento.
+Executar `ng serve` ou `npm run start` para levantar um servidor de desenvolvimento. Navegar para `http://localhost:4200/` para ver a aplicação em funcionamento.
 
 ### Buildar Aplicação
 
-Executar `ng build` para buildar o projeto. A builda fica armazenada na pasta `dist/`. Usar a flag `--prod` para uma build de produção.
+Caso ache necessário, executar `ng build` para buildar o projeto. A build fica armazenada na pasta `dist/`. Usar a flag `--prod` para uma build de produção.
 
 ## Testes
 
-Executar`ng test` para rodar testes unitários via [Karma](https://karma-runner.github.io).
-Executar`ng e2e` para rodar testes ponta a ponta (e2e, end-to-end) via [Protractor](http://www.protractortest.org/).
+Os testes necessitam do navegador Chrome instalado.
+
+Executar `ng test` ou `npm run test` para rodar testes unitários via [Karma](https://karma-runner.github.io)
+
+Executar `ng e2e` ou `npm run e2e` para rodar testes ponta a ponta (e2e, end-to-end) via [Protractor](http://www.protractortest.org/).
 
 
 ## To do
 
 * Pontos que não estão preenchidos na parte de sobre o projeto
+* Read-me em inglês
 
 ## Releases
 
+* 0.0.2
+    * Testes unitários e e2e desenvolvidos
 * 0.0.1
     * Primeira Release
     * Work in progress
