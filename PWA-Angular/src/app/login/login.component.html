@@ -1,0 +1,48 @@
+<div class="container">
+  
+    <div id="element-with-background-image">
+    </div>
+
+    <div class="formDiv" [@slidingDoorAnimation]="{value:slidingDoorValue,params:{time:'2000ms'}}">
+      <h1>Lean Cadastro</h1>
+      <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
+
+        <mat-form-field floatLabel="always" hideRequiredMarker="true">
+          <input matInput placeholder="Nome Completo" required [(ngModel)]="model.name" name="name" #name="ngModel">
+          <button mat-button *ngIf="model.name" matSuffix mat-icon-button aria-label="Clear" (click)="model.name=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error [hidden]="name.valid || name.pristine" >Campo Nome necessário</mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always" hideRequiredMarker="true">
+          <input matInput placeholder="E-mail" required [(ngModel)]="model.email" name="email" #email="ngModel">
+          <mat-error [hidden]="email.valid || email.pristine" >Campo E-mail necessário</mat-error>
+          <button mat-button *ngIf="model.email" matSuffix mat-icon-button aria-label="Clear" (click)="model.email=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always" hideRequiredMarker="true">
+          <input type="tel" matInput placeholder="CPF" maxlength="11" required [(ngModel)]="model.cpf" name="cpf" #cpf="ngModel" (keydown)="check($event)">
+          <button mat-button *ngIf="model.cpf" matSuffix mat-icon-button aria-label="Clear" (click)="model.cpf=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error [hidden]="cpf.valid || cpf.pristine" >Campo CPF necessário</mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always">
+          <input type="tel" matInput placeholder="Telefone" maxlength="11" [(ngModel)]="model.telefone" name="telefone" #telefone="ngModel" (keydown)="check($event)">
+          <button mat-button *ngIf="model.telefone" matSuffix mat-icon-button aria-label="Clear" (click)="model.telefone=''">
+            <mat-icon>close</mat-icon>
+          </button>
+          <mat-error [hidden]="telefone.valid || telefone.pristine" >Campo Telefone necessário</mat-error>
+        </mat-form-field>
+   
+        <button mat-flat-button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Registrar</button>
+        <button mat-flat-button (click)="authService.SignIn()"> Login <i class="material-icons">trending_flat</i> </button>
+
+      </form>
+    </div>
+
+  </div>

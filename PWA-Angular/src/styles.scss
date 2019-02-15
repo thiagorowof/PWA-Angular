@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: 'equipExtraLight';
+    src: url('./assets/fonts/EquipExtraLight.eot'); /* For IE */
+    src: url('./assets/fonts/EquipExtraLight.ttf') format('truetype'), /* For Chrome and Safari */
+    url('./assets/fonts/EquipExtraLight.woff') format('woff'); /* For FireFox */
+  }
+  
+h1{
+    font-family: 'equipExtraLight';
+  }
+  
