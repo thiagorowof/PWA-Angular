@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import {NgForm} from '@angular/forms';
-import { slidingDoorAnimation,moveAnimation } from '../animation';
+import { slidingDoorAnimation } from '../animation';
 
 import { User }    from '../model/user';
 
@@ -9,7 +9,7 @@ import { User }    from '../model/user';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  animations: [slidingDoorAnimation,moveAnimation]
+  animations: [slidingDoorAnimation]
 })
 export class LoginComponent implements OnInit {
 

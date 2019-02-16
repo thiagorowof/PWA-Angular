@@ -39,8 +39,8 @@
           <mat-error [hidden]="telefone.valid || telefone.pristine" >Campo Telefone necessário</mat-error>
         </mat-form-field>
    
-        <button mat-flat-button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Registrar</button>
-        <button mat-flat-button (click)="authService.SignIn()"> Login <i class="material-icons">trending_flat</i> </button>
+        <button mat-flat-button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Cadastrar</button>
+        <button mat-flat-button class="btn-login" (click)="authService.SignIn()"> Login <i class="material-icons">trending_flat</i> </button>
 
       </form>
     </div>

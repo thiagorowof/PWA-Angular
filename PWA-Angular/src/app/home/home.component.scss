@@ -1,8 +1,56 @@
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+@media only screen 
+and (max-width : 750px)  { 
+  #element-with-background-image{
+      display: none;
+  }
+  .tableDiv{
+      background-image:linear-gradient(rgba(33, 121, 181, 0.6), rgba(64, 200, 244, 0.6)), url("../../assets/img/bg.jpg");
+      background-size:     cover;                   
+      background-repeat:   no-repeat;
+      background-position: center center; 
+      padding-left: 15px;
+      width: 100% !important;
+      margin-left: 0 !important;
+      height: 100% !important;
+  }
+}
+
+.tableDiv{
+  padding: 2%;
+}
+
+.logoutDiv{
+  text-align: center;
+  margin-top: 5%;
+}
+
+#element-with-background-image {
+  // #2179b5 = rgba(33, 121, 181, 0.5)    #40c8f4 = rgba(64, 200, 244, 0.5)
+  background-image:linear-gradient(rgba(33, 121, 181, 0.6), rgba(64, 200, 244, 0.6)), url("../../assets/img/bg.jpg");
+  background-size:     cover;                   
+  background-repeat:   no-repeat;
+  background-position: center center;   
+  width: 90%;
+  height: 100vh;
+}
+
 .btn{
     background-color: #40c8f4;
     color: #ffffff;
-    width: 17vw;
+    width: 35vw;
     border-radius: 25px;
+    white-space: normal;
+}
+
+.btn-logout{
+  margin-top: 5%;
+  border-radius: 25px;
 }
 
 .example-container {
@@ -21,3 +69,10 @@
     overflow: visible;
   }
   
+  .mat-elevation-z8{
+    box-shadow: none;
+  }
+
+  ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+    background-color: #40c8f4;
+  }

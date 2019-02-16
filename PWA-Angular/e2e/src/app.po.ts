@@ -23,7 +23,7 @@ export class AppPage {
     return
   }
   getRegisterButton() {
-    element(by.cssContainingText('button', 'Registrar')).click();
+    element(by.cssContainingText('button', 'Cadastrar')).click();
     browser.sleep(100);
     element(by.cssContainingText('button', 'Login')).click();
     browser.sleep(1000);

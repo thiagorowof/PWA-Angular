@@ -1,29 +1,49 @@
 .container{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
 }
+
+@media only screen 
+and (max-width : 750px)  { 
+    #element-with-background-image{
+        display: none;
+    }
+    .formDiv{
+        background-image:linear-gradient(rgba(33, 121, 181, 0.6), rgba(64, 200, 244, 0.6)), url("../../assets/img/bg.jpg");
+        background-size:     cover;                   
+        background-repeat:   no-repeat;
+        background-position: center center; 
+        padding-left: 15px;
+        width: 100% !important;
+        margin-left: 0 !important;
+        height: 100% !important;
+    }
+}
+
+
+
 #element-with-background-image {
     // #2179b5 = rgba(33, 121, 181, 0.5)    #40c8f4 = rgba(64, 200, 244, 0.5)
     background-image:linear-gradient(rgba(33, 121, 181, 0.6), rgba(64, 200, 244, 0.6)), url("../../assets/img/bg.jpg");
     background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;   
-    width: 80vh;
+    width: 90%;
     height: 100vh;
 }
 
 .btn{
     background-color: #40c8f4;
     color: #ffffff;
-    width: 17vw;
+    width: 50%;
     border-radius: 25px;
 }
 
 .formDiv{
     width: 0px;
     overflow: hidden;
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
 ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline{
@@ -31,6 +51,39 @@
 }
 
 mat-form-field{
-    width: 100%;
+    width: 90%;
 }
 
+.btn-login{
+    border-radius: 25px;
+    margin-left: 5%;
+}
+
+.mat-form-field-label, .mat-form-field-appearance-legacy .mat-form-field-label, .btn-login {
+    color: #999999;
+}
+
+.mat-input-element {
+    color:  #efeeed;
+}
+
+.mat-input-element:focus {
+    color:  #555555 !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+    color: #40c8f4;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: #40c8f4;
+}
+
+.mat-flat-button[disabled][disabled]{
+    background-color: #f6f6f6;
+    color: #dddcdc;
+}
+
+.btn-success:hover{
+    opacity: 0.7;
+}
